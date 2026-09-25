@@ -39,7 +39,7 @@
 
 import java.util.*;
 
-public class rotateArr {
+public class RotateArrayBy_k {
 
     static void reverse(int[] arr, int start, int end) {
         while (start < end) {
@@ -52,13 +52,13 @@ public class rotateArr {
         }
     }
 
-    static void leftRotate(int[] arr, int d) {
+    static void leftRotate(int[] arr, int k) {
 
         int n = arr.length;
-        d = d % n;
+        k = k % n;
 
-        reverse(arr, 0, d - 1);
-        reverse(arr, d, n - 1);
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n - 1);
         reverse(arr, 0, n - 1);
     }
 
@@ -67,7 +67,7 @@ public class rotateArr {
         int[] arr = {1, 2, 3, 4, 5};
         int d = 2;
 
-        leftRotate(arr, d);
+        leftRotate(arr, k);
 
         System.out.println(Arrays.toString(arr));
                         //or
