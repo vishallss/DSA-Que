@@ -55,7 +55,7 @@ public class RotateArrayBy_k {
     static void leftRotate(int[] arr, int k) {
 
         int n = arr.length;
-        k = k % n;
+        k = k % n;             //k = k % n; means reduce k when it is bigger than the array length.
 
         reverse(arr, 0, k - 1);
         reverse(arr, k, n - 1);
